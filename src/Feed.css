@@ -1,0 +1,35 @@
+/* Hide scorllbar for Chrome, Safari, and Opera */
+.feed::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.feed {
+    -ms-overflow-style: none;
+    /*IE and Edge*/
+    scrollbar-width: none;
+}
+
+.feed {
+    flex: 0.4;
+    border-right: 1px solid var(--twitter-background);
+    /* this says to fit the content (aka the twitter post) */
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+/* keeps "Home" on the screen when you scroll */
+.feed__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background);
+    /* padding left and right */
+    padding: 15px 20px;
+}
+
+.feed__header>h2 {
+    font-size: 20px;
+    font-weight: 800;
+}
